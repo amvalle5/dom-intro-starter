@@ -25,4 +25,22 @@ for(let span of dkBlueSpans){
 let svgs = document.querySelectorAll("#svgs svg");
 
 // array of colors to change the stroke to
-let colors = [];
+let colors = ["#F2DCC9", "#D9BCA3", "#7C9EA6", "#3C5E73", "#283040"];
+
+// loop through both arrays and set a color for each svg
+for(let i = 0; i < svgs.length; i++){
+    svgs[i].style.stroke = colors[i];
+}
+
+// grab the first span with the bold class in section five and change text color to #7C9EA6
+document.querySelector("#query .bold").style.color = "#7C9EA6";
+
+// replace first list item text with "This is new list text"
+// document.querySelector(".content_list li").textContent = "This is new list text";
+document.querySelector(".content_list li:first-of-type").textContent = "This is new list text";
+
+// for the third list item, add your name to the existing text and wrap it in some strong tags
+document.querySelectorAll(".content_list li")[2].innerHTML += " <strong>Araceli Valles</strong>";
+
+// remove hidden attribute from link in last section
+document.querySelector("#remove a").removeAttribute("hidden");
